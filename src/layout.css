@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1d25;
+  padding: 10px 20px;
+  border-bottom: 1px solid #2e323d;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4da3ff;
+}
+
+.navbar nav a {
+  color: #b8bcc5;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.95rem;
+}
+
+.navbar nav a:hover {
+  color: #4da3ff;
+}
+
+.search {
+  background-color: #2a2f3b;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+}
+
