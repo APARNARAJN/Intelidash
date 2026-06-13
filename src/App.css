@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f1117;
+  color: #e4e6eb;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  height: 56px;
+  background: linear-gradient(to bottom, #1c1f2a, #161821);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #4da3ff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.navbar nav a {
+  color: #e4e6eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: #4da3ff;
+}
+
+.search {
+  background: #2a2f3b;
+  border: none;
+  padding: 6px 10px;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* ================= LAYOUT ================= */
+.dashboard-body {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 260px;
+  background: #1a1d27;
+  border-right: 1px solid #2e323d;
+  padding: 18px;
+}
+
+.sidebar h3 {
+  color: #4da3ff;
+  margin-bottom: 10px;
+}
+
+.sidebar input {
+  width: 100%;
+  background: #2a2f3b;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+}
+
+.sidebar li {
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color: #4da3ff;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.main h1 {
+  margin-top: 0;
+}
+
+/* ================= FILE UPLOAD ================= */
+.file-upload-bar {
+  border: 2px dashed #4da3ff;
+  background: #2a2f3b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.file-upload-bar input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-bar p {
+  font-size: 13px;
+  color: #4da3ff;
+  margin: 0;
+}
+
+.uploaded-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #171a21;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 6px;
+}
+
+/* ================= CANVAS (THIS FIXES IT) ================= */
+.canvas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 16px;
+  min-height: 360px;
+  padding: 20px;
+  border: 2px dashed #4da3ff44;
+  border-radius: 12px;
+  background: #171a21;
+  margin-bottom: 24px;
+}
+
+/* Center empty state exactly like image */
+.placeholder {
+  grid-column: 1 / -1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #4da3ff;
+  text-align: center;
+}
+
+.placeholder button {
+  margin-top: 12px;
+  background: #4da3ff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================= WIDGET ================= */
+.widget {
+  background: #2a2f3b;
+  border-radius: 12px;
+  padding: 14px;
+  height: 160px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.widget:hover {
+  transform: translateY(-3px);
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.widget h4 {
+  margin: 0;
+  color: #4da3ff;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ================= WIDGET LIBRARY ================= */
+.widget-library h2 {
+  color: #4da3ff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.widgets {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.widget-item {
+  background: #2a2f3b;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: grab;
+  font-size: 13px;
+  user-select: none;
+}
+
+.widget-item:hover {
+  background: #4da3ff;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .canvas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .canvas {
+    grid-template-columns: 1fr;
+  }
+}
