@@ -8,6 +8,10 @@ inteli/
 venv/
 env/
 
+# Server secrets
+server/.env
+server/.env.*
+
 # Python generated files
 __pycache__/
 *.py[cod]
