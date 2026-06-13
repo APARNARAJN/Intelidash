@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Python virtual environments
+inteli/
+.venv/
+venv/
+env/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Frontend build output
+dist/
+dist-ssr/
+
+# Logs and local config
+logs/
+*.log
+*.local
+.env
+.env.*
+
+# Editor and OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

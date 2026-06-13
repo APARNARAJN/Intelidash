@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f1117;
+  color: #e4e6eb;
+}
+
+/* ================= LAYOUT ================= */
+.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 260px;
+  background: #1a1d27;
+  border-right: 1px solid #2e323d;
+  padding: 18px;
+}
+
+.sidebar h3 {
+  color: #4da3ff;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.sidebar input {
+  width: 100%;
+  background: #2a2f3b;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.sidebar h4 {
+  color: #e4e6eb;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 8px 0;
+  cursor: pointer;
+  color: #e4e6eb;
+}
+
+.sidebar li:hover {
+  color: #4da3ff;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.main h1 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #e4e6eb;
+}
+
+/* ================= FILE UPLOAD ================= */
+.file-upload-bar {
+  border: 2px dashed #4da3ff;
+  background: #2a2f3b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.file-upload-bar.dragging {
+  background: #3a3f4b;
+}
+
+.file-upload-bar input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-bar p {
+  font-size: 13px;
+  color: #4da3ff;
+  margin: 0;
+}
+
+.uploaded-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #171a21;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 6px;
+}
+
+/* ================= CANVAS ================= */
+.canvas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 16px;
+  min-height: 300px;
+  padding: 20px;
+  border: 2px dashed rgba(77, 163, 255, 0.27);
+  border-radius: 12px;
+  background: #171a21;
+  margin-bottom: 24px;
+}
+
+/* Center empty state */
+.placeholder {
+  grid-column: 1 / -1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #4da3ff;
+  text-align: center;
+}
+
+.placeholder p {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+}
+
+.placeholder button {
+  background: #4da3ff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================= AI RESULT ================= */
+.chat-input-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-wrap input {
+  margin-bottom: 0;
+}
+
+.ask-btn {
+  background: #4da3ff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 52px;
+}
+
+.ask-btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.suggestions-label {
+  color: #8f98aa;
+  font-size: 12px;
+  margin: 16px 0 8px;
+}
+
+.chart-result {
+  background: #171a21;
+  border: 1px solid #2e323d;
+  border-radius: 10px;
+  padding: 18px;
+  min-height: 420px;
+}
+
+.chart-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.chart-header h3 {
+  color: #e4e6eb;
+  font-size: 18px;
+  margin: 0;
+}
+
+.sql-badge {
+  background: #223249;
+  border: 1px solid #4da3ff55;
+  border-radius: 6px;
+  color: #8cc5ff;
+  cursor: help;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.error-box,
+.loading-box {
+  background: #171a21;
+  border: 1px solid #2e323d;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+}
+
+.error-box {
+  border-color: #ff6b6b66;
+  color: #ff9b9b;
+}
+
+.loading-box {
+  color: #8cc5ff;
+}
+
+.data-table {
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.data-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.data-table th,
+.data-table td {
+  border-bottom: 1px solid #2e323d;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.data-table th {
+  color: #8cc5ff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  color: #e4e6eb;
+  font-size: 13px;
+}
+
+/* ================= WIDGET ================= */
+.widget {
+  background: #2a2f3b;
+  border-radius: 12px;
+  padding: 14px;
+  height: 160px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.widget:hover {
+  transform: translateY(-3px);
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.widget h4 {
+  margin: 0;
+  color: #4da3ff;
+  font-size: 14px;
+}
+
+.widget-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget-content p {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  color: #ff6b6b;
+}
+
+/* ================= WIDGET LIBRARY ================= */
+.widget-library {
+  margin-top: 24px;
+}
+
+.widget-library h2 {
+  color: #4da3ff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.widgets {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.widget-item {
+  background: #2a2f3b;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: grab;
+  font-size: 13px;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.widget-item:hover {
+  background: #4da3ff;
+  color: #fff;
+}
+
+.widget-item:active {
+  cursor: grabbing;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .canvas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .canvas {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-body {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #2e323d;
+  }
+}

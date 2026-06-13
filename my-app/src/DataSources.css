@@ -1,0 +1,129 @@
+.datasources {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  height: 60px;
+  background: #10141c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  font-weight: bold;
+  color: #1da1f2;
+  font-size: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #fff;
+  border-bottom: 2px solid #1da1f2;
+}
+
+.search {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+/* Main */
+.datasource-wrapper {
+  padding: 40px;
+}
+
+.datasource-wrapper h1 {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+
+/* Empty */
+.empty-box {
+  background: #111827;
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
+  color: #9ca3af;
+}
+
+/* Grid */
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.file-card {
+  background: #111827;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #1f2937;
+  transition: 0.2s;
+}
+
+.file-card:hover {
+  transform: translateY(-3px);
+  border-color: #1da1f2;
+}
+
+.file-type {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.file-size {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #065f46;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.expiry {
+  display: block;
+  font-size: 12px;
+  color: #fbbf24;
+  margin-top: 4px;
+}
+
+.delete-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: #7f1d1d;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
